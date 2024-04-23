@@ -19,12 +19,13 @@ int main(){
 	printf("Can\'t write all string\n");
 	exit(-1);
 }
-//Усли запись прошла и количество байт меньше, пишем сообщение
+//Если запись прошла и количество байт меньше, пишем сообщение
 	size = read(fd[0],resstring,14);
 	if(size<0){
 	printf("Can\'t read string\n");
 	exit(-1);
 }
+//Закрытие пайп для записи
 	printf("%s\n",resstring);
 	if(close(fd[0])<0){
 	printf("Can\'t close output stream\n");
