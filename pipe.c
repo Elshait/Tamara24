@@ -39,14 +39,15 @@ int main(){
 			printf("Can\'t write all string\n");
 			exit(-1);
 		}
-		printf("Процесс родитель записал информацию в пайп и заканчивает работу\n");
+		printf("Процесс родитель записал информацию в pipe\n");
 		size = read(fd2[0],resstring2,14);
                 if(size != 14){
                         printf("Can\'t read string\n");
                         exit(-1);
 		}
-		printf("Информация от дочернего процесса:  %s\n", resstring2);
-
+		printf("Информация от дочернего процесса: ", resstring2);
+		for(int i=0; i<14; i++) printf("%c", resstring2[i]);
+		printf("\n");
 		if (close(fd1[1])<0){
 			printf("Не получилось закрыть исходящий поток\n");
 			exit(-1);
@@ -74,7 +75,9 @@ int main(){
 			exit(-1);
 		}
 //Закрытие пайп для записи
-		printf("%s\n", resstring1);
+		printf("Информация от родителя: ");
+                for(int i=0; i<13; i++) printf("%c", resstring1[i]);
+                printf("\n");
 		size = write(fd2[1], string2, 14);
                 if(size !=14){
                         printf("Can\'t write all string\n");
@@ -92,3 +95,4 @@ int main(){
 	}
 	return 0;
 }
+
