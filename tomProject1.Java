@@ -15,7 +15,7 @@ class Cylinder extends Shape {
     }
     
     // Переопределяем метод getArea для вычисления площади цилиндра
-    @Override
+
     public double getArea() {
         return 2 * Math.PI * radius * (radius + height);
     }
@@ -30,7 +30,7 @@ class Cube extends Shape {
     }
     
     // Переопределяем метод getArea для вычисления площади куба
-    @Override
+
     public double getArea() {
         return 6 * side * side;
     }
@@ -47,7 +47,7 @@ class Pyramid extends Shape {
     }
     
     // Переопределяем метод getArea для вычисления площади пирамиды
-    @Override
+
     public double getArea() {
         return baseLength * baseLength + 2 * baseLength * Math.sqrt((baseLength/2) * (baseLength/2) + height * height);
     }
