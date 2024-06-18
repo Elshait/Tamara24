@@ -3,7 +3,7 @@ abstract class Shape {
     abstract double area();
 }
 
-// Создаем класс для вычисления площади цилиндра с наследованием от класса Shape
+// Создаем класс для вычисления объема цилиндра с наследованием от класса Shape
 class Cylinder extends Shape {
     double radius;
     double height;
@@ -19,7 +19,7 @@ class Cylinder extends Shape {
     }
 }
 
-// Создаем класс для вычисления площади конуса с наследованием от класса Shape
+// Создаем класс для вычисления объема конуса с наследованием от класса Shape
 class Cone extends Shape {
     double radius;
     double height;
@@ -35,7 +35,7 @@ class Cone extends Shape {
     }
 }
 
-// Создаем класс для вычисления площади пирамиды с наследованием от класса Shape
+// Создаем класс для вычисления объема пирамиды с наследованием от класса Shape
 class Pyramid extends Shape {
     double baseLength;
     double baseWidth;
