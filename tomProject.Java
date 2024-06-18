@@ -60,8 +60,8 @@ public class Main {
         Shape shape2 = new Cone(2, 5);
         Shape shape3 = new Pyramid(4, 6, 3);
         
-        System.out.println("Площадь цилиндра " + shape1.area());
-        System.out.println("Площадь конуса: " + shape2.area());
-        System.out.println("Площадь пирамиды: " + shape3.area());
+        System.out.println("Объем цилиндра " + shape1.area());
+        System.out.println("Объем конуса: " + shape2.area());
+        System.out.println("Объем пирамиды: " + shape3.area());
     }
 }
